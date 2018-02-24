@@ -1,0 +1,23 @@
+matrix1=zeros(10000);
+for i=1:10000
+  t=randi([10,30]);
+  
+  for j=1:t
+    c=randi(10000);
+    matrix1(i,c)=1;
+  end
+  
+end
+
+
+% for frequency
+matrix1=zeros(10000);
+for i=1:10000
+  t=randi([10,30]);
+  
+  for j=1:t
+    c=randi(10000);
+    matrix1(i,c)=randi(3);
+  end
+  
+end
