@@ -18,3 +18,12 @@ Matrix 3 (10000 x 10000)  : Multivalue (0/1/2/3) matrix1
 Libraries
 
 https://java-matrix.org/
+
+Supporting Sparse Matrix
+
+Smile Math
+Apache Commons Math
+MTj
+parallel colt
+Jsci
+Jscience
