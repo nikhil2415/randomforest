@@ -23,13 +23,15 @@ public class Main {
     }
     public static void apachetest(double[][] x){
         System.out.println("Testing Apache");
-//        RealMatrix X = MatrixUtils.createRealMatrix(x);
-        OpenMapRealMatrix X = new OpenMapRealMatrix(x);
+        RealMatrix sm1 = MatrixUtils.createRealMatrix(x);
+        OpenMapRealMatrix sm2 = new OpenMapRealMatrix(sm1.getRowDimension(),sm1.getColumnDimension());
+        OpenMapRealMatrix X= (OpenMapRealMatrix) sm2.add(sm1);
         long timebefore = System.nanoTime();
         OpenMapRealMatrix Z = X.multiply(X);
         double timeinms = (System.nanoTime() - timebefore)/1e6;
         System.out.println("Rows: " + X.getRowDimension() + " Cols: " + X.getColumnDimension());
         System.out.println("Time in ms for X*X: " + timeinms);
+
     }
     public static void main(String[] args) throws IOException{
         System.out.println("Running");
